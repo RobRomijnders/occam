@@ -56,13 +56,13 @@ Interlude: it took me personally many months to figure out this intuition. Stati
 
 The following formula calculates the evidence for model comparison
 
-<img alt="$p(D|H) = \int_\theta p(D,\theta|H)d\theta= \int_\theta p(D|H,\theta)p(\theta|H)d\theta$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/d15df27da7c656d3e1e4d034107543d0.svg?raw=true" align="middle" width="356.079405pt" height="26.48448pt"/>
+<img alt="$p(D|H) = \int_\theta p(D,\theta|H)d\theta= \int_\theta p(D|H,\theta)p(\theta|H)d\theta$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/d15df27da7c656d3e1e4d034107543d0.svg" align="middle" width="356.079405pt" height="26.48448pt"/>
 
 Components
-  * <img alt="$D$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/78ec2b7008296ce0561cf83393cb746d.svg?raw=true" align="middle" width="14.06625pt" height="22.46574pt"/> is the data.
-  * <img alt="$H$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg?raw=true" align="middle" width="14.999985pt" height="22.46574pt"/> is the model. Any assumptions on the model are condensed in this variable.
-  * <img alt="$\theta$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/27e556cf3caa0673ac49a8f0de3c73ca.svg?raw=true" align="middle" width="8.1735885pt" height="22.83138pt"/> are all the unknown parameters in our model.
-  * We name <img alt="$p(D|H,\theta)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/2bc2efb539de5a25c5fe6c2445db7a37.svg?raw=true" align="middle" width="69.254625pt" height="24.6576pt"/> the likelihood and <img alt="$p(\theta|H)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/97a39984a4c3acb147ca6c9a2b780592.svg?raw=true" align="middle" width="48.79578pt" height="24.6576pt"/> the prior.
+  * <img alt="$D$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/78ec2b7008296ce0561cf83393cb746d.svg" align="middle" width="14.06625pt" height="22.46574pt"/> is the data.
+  * <img alt="$H$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/7b9a0316a2fcd7f01cfd556eedf72e96.svg" align="middle" width="14.999985pt" height="22.46574pt"/> is the model. Any assumptions on the model are condensed in this variable.
+  * <img alt="$\theta$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/27e556cf3caa0673ac49a8f0de3c73ca.svg" align="middle" width="8.1735885pt" height="22.83138pt"/> are all the unknown parameters in our model.
+  * We name <img alt="$p(D|H,\theta)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/2bc2efb539de5a25c5fe6c2445db7a37.svg" align="middle" width="69.254625pt" height="24.6576pt"/> the likelihood and <img alt="$p(\theta|H)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/97a39984a4c3acb147ca6c9a2b780592.svg" align="middle" width="48.79578pt" height="24.6576pt"/> the prior.
 
 In words, the evidence is the _probability a model assigns to the data, marginalised out all unknown parameters of the model_.
 
@@ -70,7 +70,7 @@ Now we have two intuitions why this would embody Occam's razor. The first is due
 
 __Intuition 1__ (Due to E.T. Jaynes)
 
-The evidence integrates out the parameters, from the multiplication of likelihood and prior. Let's pick two models that assign equal likelihood to the data. So <img alt="$p(D|H_1,\theta)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/f727783e8cf64e2e05831dcb76ab3d99.svg?raw=true" align="middle" width="76.206735pt" height="24.6576pt"/> and <img alt="$p(D|H_2,\theta)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/08fcc685026c66e9f4c975b2c674920a.svg?raw=true" align="middle" width="76.206735pt" height="24.6576pt"/> are equal. However, model 2 uses more parameters. With more probability, the prior is spread over more parameters. Therefore, for the likely parameters, the probability density is lower. Integrating the multiplication of prior and likelihood will thus result in a lower value for model 2.
+The evidence integrates out the parameters, from the multiplication of likelihood and prior. Let's pick two models that assign equal likelihood to the data. So <img alt="$p(D|H_1,\theta)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/f727783e8cf64e2e05831dcb76ab3d99.svg" align="middle" width="76.206735pt" height="24.6576pt"/> and <img alt="$p(D|H_2,\theta)$" src="https://github.com/RobRomijnders/occam/blob/master/svgs/08fcc685026c66e9f4c975b2c674920a.svg" align="middle" width="76.206735pt" height="24.6576pt"/> are equal. However, model 2 uses more parameters. With more probability, the prior is spread over more parameters. Therefore, for the likely parameters, the probability density is lower. Integrating the multiplication of prior and likelihood will thus result in a lower value for model 2.
 
 __Intuition 2__ (Due to David Mackay)
 
