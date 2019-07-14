@@ -29,7 +29,7 @@ Using this description language, we bound the out-sample error as `out_sample_er
 
 More formally, we repeat theorem 7.7 from Understanding Machine Learning (see further reading section below).
 
-![theorem](www.linktoimage.com)
+![theorem](https://github.com/RobRomijnders/occam/blob/master/doc/occam.png?raw=true)
 
 ### Implementation
 
